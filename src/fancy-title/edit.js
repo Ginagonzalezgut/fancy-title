@@ -1,5 +1,9 @@
 import { __ } from "@wordpress/i18n";
-import { useBlockProps, RichText } from "@wordpress/block-editor";
+import {
+	useBlockProps,
+	RichText,
+	BlockControls,
+} from "@wordpress/block-editor";
 import "./editor.scss";
 
 export default function Edit({ attributes, setAttributes }) {
@@ -10,13 +14,26 @@ export default function Edit({ attributes, setAttributes }) {
 	}
 
 	return (
-		<RichText
-			{...useBlockProps()}
-			onChange={handleChange}
-			value={text}
-			placeholder={__("type here a title", "fancy-title")}
-			tagName="h3"
-			allowedFormats={["core/bold"]}
-		/>
+		<>
+			<BlockControls
+				controls={[
+					{
+						title: "button",
+						icon: "admin-home",
+						onClick: () => {
+							alert("has hundido el botón");
+						},
+					},
+				]}
+			/>
+			<RichText
+				{...useBlockProps()}
+				onChange={handleChange}
+				value={text}
+				placeholder={__("type here a title", "fancy-title")}
+				tagName="h3"
+				allowedFormats={["core/bold"]}
+			/>
+		</>
 	);
 }
