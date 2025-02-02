@@ -1,0 +1,1 @@
+{"version":3,"file":"fancy-title/index.css","mappings":";;;AAAA;EACC;AACD,C","sources":["webpack://fancy-title/./src/fancy-title/editor.scss"],"sourcesContent":[".wp-block-create-block-fancy-title {\n\tborder: 1px dotted #f00;\n}\n"],"names":[],"sourceRoot":""}
