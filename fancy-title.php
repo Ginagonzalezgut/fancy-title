@@ -1,11 +1,12 @@
 <?php
+
 /**
  * Plugin Name:       Fancy Title
- * Description:       Example block scaffolded with Create Block tool.
+ * Description:       Create a fancy title
  * Version:           0.1.0
  * Requires at least: 6.7
  * Requires PHP:      7.4
- * Author:            The WordPress Contributors
+ * Author:            Gina
  * License:           GPL-2.0-or-later
  * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
  * Text Domain:       fancy-title
@@ -13,7 +14,7 @@
  * @package CreateBlock
  */
 
-if ( ! defined( 'ABSPATH' ) ) {
+if (! defined('ABSPATH')) {
 	exit; // Exit if accessed directly.
 }
 
@@ -24,7 +25,8 @@ if ( ! defined( 'ABSPATH' ) ) {
  *
  * @see https://developer.wordpress.org/reference/functions/register_block_type/
  */
-function create_block_fancy_title_block_init() {
-	register_block_type( __DIR__ . '/build/fancy-title' );
+function create_block_fancy_title_block_init()
+{
+	register_block_type(__DIR__ . '/build/fancy-title');
 }
-add_action( 'init', 'create_block_fancy_title_block_init' );
+add_action('init', 'create_block_fancy_title_block_init');
